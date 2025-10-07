@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Belajar Aljabar Linear</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: white;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    .modul {
+      background: white;
+      border-left: 6px solid #1e3c72;
+      padding: 25px;
+      margin: 30px 0;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+
+    .modul-title {
+      font-size: 1.8em;
+      color: #1e3c72;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+    }
+
+    .modul-title::before {
+      content: "";
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background: #1e3c72;
+      margin-right: 10px;
+      border-radius: 50%;
+    }
+
+    .kegiatan {
+      background: #f0f7ff;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 6px;
+      border-left: 4px solid #2a5298;
+    }
+
+    .kegiatan-title {
+      font-size: 1.3em;
+      color: #2a5298;
+      margin-bottom: 10px;
+    }
+
+    .content {
+      margin-top: 15px;
+      font-size: 1.05em;
+    }
+
+    .content p {
+      margin-bottom: 15px;
+    }
+
+    .example {
+      background: #fffde7;
+      padding: 15px;
+      border-left: 4px solid #ffc107;
+      margin: 15px 0;
+      border-radius: 4px;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      background: #eee;
+      font-size: 0.9em;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .container {
+        padding: 10px;
+      }
+      h1 { font-size: 2em; }
+      .modul-title { font-size: 1.5em; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📘 Belajar Aljabar Linear</h1>
+    <p>Scroll saja, pelajari satu modul demi satu modul — mudah dimengerti & tanpa ribet!</p>
+  </header>
+
+  <div class="container">
+
+    <!-- MODUL 01 -->
+    <section class="modul">
+      <div class="modul-title">Modul 01: Matriks</div>
+
+      <div class="kegiatan">
+        <div class="kegiatan-title">Kegiatan Belajar 1: Pengertian Matriks</div>
+        <div class="content">
+          <p>Matriks adalah susunan bilangan yang diatur dalam baris dan kolom. Contohnya:</p>
+          <div class="example">
+            <p><strong>Contoh Matriks 2x3:</strong></p>
+            <pre>
+[ 1  2  3 ]
+[ 4  5  6 ]
+            </pre>
+          </div>
+          <p>Matriks ditulis dalam tanda kurung siku, dan ukurannya ditulis sebagai jumlah baris × kolom.</p>
+        </div>
+      </div>
+
+      <div class="kegiatan">
+        <div class="kegiatan-title">Kegiatan Belajar 2: Sifat Operasi Matriks</div>
+        <div class="content">
+          <p>Operasi dasar pada matriks meliputi penjumlahan, pengurangan, dan perkalian. Beberapa sifat penting:</p>
+          <ul>
+            <li>Penjumlahan bersifat komutatif: A + B = B + A</li>
+            <li>Perkalian tidak selalu komutatif: A × B ≠ B × A</li>
+            <li>Harus memperhatikan ukuran matriks saat melakukan operasi.</li>
+          </ul>
+          <div class="example">
+            <p><strong>Contoh Penjumlahan:</strong></p>
+            <pre>
+A = [1 2]   B = [3 4]   → A+B = [4 6]
+    [3 4]       [5 6]           [8 10]
+            </pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODUL 02 -->
+    <section class="modul">
+      <div class="modul-title">Modul 02: Operasi Baris dan Matriks Eselon</div>
+
+      <div class="kegiatan">
+        <div class="kegiatan-title">Kegiatan Belajar 1: Operasi Baris Elementer</div>
+        <div class="content">
+          <p>Operasi Baris Elementer (OBE) adalah manipulasi baris matriks untuk menyederhanakan bentuknya. Ada 3 jenis OBE:</p>
+          <ol>
+            <li>Menukar dua baris.</li>
+            <li>Mengalikan baris dengan skalar tak nol.</li>
+            <li>Menambahkan kelipatan satu baris ke baris lain.</li>
+          </ol>
+          <p>Digunakan untuk mencari solusi sistem persamaan linear.</p>
+        </div>
+      </div>
+
+      <div class="kegiatan">
+        <div class="kegiatan-title">Kegiatan Belajar 2: Matriks Eselon, Eselon Tereduksi, dan Elementer</div>
+        <div class="content">
+          <p><strong>Matriks Eselon Baris</strong>: tiap baris pertama yang bukan nol memiliki 1 utama (leading 1), dan setiap 1 utama ada di kanan 1 utama baris atasnya.</p>
+          <p><strong>Matriks Eselon Baris Tereduksi</strong>: tambahan, semua elemen di atas dan bawah 1 utama adalah 0.</p>
+          <div class="example">
+            <p><strong>Contoh Eselon Tereduksi:</strong></p>
+            <pre>
+[1 0 2]
+[0 1 3]
+[0 0 0]
+            </pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODUL 03 -->
+    <section class="modul">
+      <div class="modul-title">Modul 03: Sistem Persamaan Linear</div>
+
+      <div class="kegiatan">
+        <div class="kegiatan-title">Kegiatan Belajar 1: Jawab Sistem Persamaan Linear</div>
+        <div class="content">
+          <p>Sistem persamaan linear bisa diselesaikan dengan:</p>
+          <ul>
+            <li>Substitusi</li>
+            <li>Eliminasi</li>
+            <li>Gauss-Jordan (menggunakan OBE)</li>
+          </ul>
+          <p>Contoh sistem 2 variabel:</p>
+          <div class="example">
+            <p>x + y = 5<br>y - x = 1</p>
+            <p>Solusi: x = 2, y = 3</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="kegiatan">
+        <div class="kegiatan-title">Kegiatan Belajar 2: Analisis Jawab Sistem Persamaan Linear</div>
+        <div class="content">
+          <p>Sistem bisa memiliki:</p>
+          <ul>
+            <li>Satu solusi (konsisten & independen)</li>
+            <li>Tak hingga solusi (konsisten & dependen)</li>
+            <li>Tidak ada solusi (inkonsisten)</li>
+          </ul>
+          <p>Dengan matriks augmented dan bentuk eselon, kita bisa menentukan jenis solusi.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODUL 04 -->
+    <section class="modul">
+      <div class="modul-title">Modul 04: Determinan</div>
+
+      <div class="kegiatan">
+        <div class="kegiatan-title">Kegiatan Belajar 1: Pengertian dan Sifat-Sifat Determinan</div>
+        <div class="content">
+          <p>Determinan hanya berlaku untuk matriks persegi (n×n). Simbol: det(A) atau |A|.</p>
+          <p>Untuk matriks 2x2:</p>
+          <div class="example">
+            <p>A = [a b]<br>&nbsp;&nbsp;&nbsp;&nbsp;[c d]</p>
+            <p>det(A) = ad - bc</p>
+          </div>
+          <p>Sifat penting:</p>
+          <ul>
+            <li>det(A^T) = det(A)</li>
+            <li>det(kA) = k^n det(A) untuk matriks n×n</li>
+            <li>Jika dua baris/kolom sama → determinan = 0</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="kegiatan">
+        <div class="kegiatan-title">Kegiatan Belajar 2: Penerapan Determinan</div>
+        <div class="content">
+          <p>Determinan digunakan untuk:</p>
+          <ul>
+            <li>Mencari invers matriks (jika det ≠ 0)</li>
+            <li>Menghitung luas/ volume paralelogram / parallelepiped</li>
+            <li>Menyelesaikan sistem linier dengan aturan Cramer</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODUL 05 -->
+    <section class="modul">
+      <div class="modul-title">Modul 05: Ruang Vektor R² dan R³</div>
+
+      <div class="kegiatan">
+        <div class="kegiatan-title">Kegiatan Belajar 1: Ruang Vektor R³</div>
+        <div class="content">
+          <p>R³ adalah himpunan semua vektor 3 dimensi: (x, y, z).</p>
+          <p>Vektor bisa dijumlahkan dan dikalikan skalar.</p>
+          <div class="example">
+            <p><strong>Contoh:</strong> u = (1,2,3), v = (4,5,6)<br>u + v = (5,7,9)</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="kegiatan">
+        <div class="kegiatan-title">Kegiatan Belajar 2: Persamaan Parameter Garis dan Bidang</div>
+        <div class="content">
+          <p><strong>Garis di R³:</strong> r(t) = r₀ + t·v, dengan r₀ titik awal, v vektor arah.</p>
+          <p><strong>Bidang di R³:</strong> ax + by + cz = d, atau menggunakan vektor normal.</p>
+          <div class="example">
+            <p>Bidang melalui titik (1,2,3) dengan normal (2, -1, 4):<br>2(x-1) -1(y-2) +4(z-3) = 0</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODUL 06 -->
+    <section class="modul">
+      <div class="modul-title">Modul 06: Perkalian Titik dan Perkalian Silang</div>
+
+      <div class="kegiatan">
+        <div class="kegiatan-title">Kegiatan Belajar 1: Perkalian Titik di R² dan R³, Perkalian Silang di R³</div>
+        <div class="content">
+          <p><strong>Perkalian Titik (Dot Product):</strong> menghasilkan skalar.</p>
+          <p>u · v = u₁v₁ + u₂v₂ + u₃v₃</p>
+          <p><strong>Perkalian Silang (Cross Product):</strong> hanya di R³, menghasilkan vektor tegak lurus kedua vektor.</p>
+          <div class="example">
+            <p>u = (1,2,3), v = (4,5,6)<br>u × v = (-3, 6, -3)</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="kegiatan">
+        <div class="kegiatan-title">Kegiatan Belajar 2: Persamaan Koordinat Garis dan Bidang di R³</div>
+        <div class="content">
+          <p>Kita bisa menulis persamaan garis/bidang menggunakan:</p>
+          <ul>
+            <li>Parameter (vektor posisi + arah)</li>
+            <li>Simbol titik dan normal (untuk bidang)</li>
+          </ul>
+          <p>Contoh: Garis melalui (1,0,2) searah (2,1,-1) → r(t) = (1+2t, t, 2-t)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- RIWAYAT PENULIS & ALFABET GERIK YUNANI -->
+    <section class="modul">
+      <div class="modul-title">Riwayat Penulis & Alfabet Gerik Yunani</div>
+      <div class="content">
+        <p><strong>Riwayat Penulis:</strong> Modul ini disusun oleh tim pendidik matematika untuk membantu mahasiswa memahami konsep aljabar linear secara bertahap dan visual.</p>
+        <p><strong>Alfabet Yunani Umum:</strong></p>
+        <pre>
+α (alpha)     β (beta)     γ (gamma)     δ (delta)
+ε (epsilon)   ζ (zeta)     η (eta)       θ (theta)
+λ (lambda)    μ (mu)       π (pi)        σ (sigma)
+φ (phi)       ψ (psi)      ω (omega)
+        </pre>
+        <p>Alfabet Yunani sering digunakan dalam notasi matematika, misalnya λ untuk nilai eigen, σ untuk deviasi standar, dll.</p>
+      </div>
+    </section>
+
+  </div>
+
+  <footer class="footer">
+    © 2025 Belajar Aljabar Linear — Mudah, Jelas, Tanpa Ribet.
+  </footer>
+
+</body>
+</html>
